@@ -3,37 +3,46 @@
     <head>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css"/>
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <div class="greetings background">
             <h2>Project <strong>Tessera</strong></h2>
             <h1>Welcome at <strong>TESSERA</strong></h1>
-            <p>Tessera is Quad Tree Strategyvideo converter.</p>
-            <p>We convert your video into Mosaic High definition video</p>
-            <p>with your own settings specifications!</p>
-            <div class="upload_button">Upload Video</div>
+            <form name="uploadform" method="POST" action="video_upload.php" target="upload" enctype="multipart/form-data">
+                <div class="settings">
+                    <p class="label">SETTINGS OPTIONS</p>
+                    <div>
+                        <label>Topic: </label>
+                        <select>
+                            <option>Animals</option>
+                        </select>
+                        <label style="padding-left:20px">Compression: </label>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>4</option>
+                            <option>8</option>
+                        </select>
+                        <span class="upload_button">
+                            <input name="file" type="file" onchange="document.forms.uploadform.submit(); onSubmit();"/>
+                            Upload Video
+                        </span>
+                    </div>
+                </div>
+                <iframe name="upload" src="" frameborder="0" width="0" height="0"></iframe>
+            </form>
+            <p>Tessera is Quad Tree Strategyvideo converter. We convert your video into Mosaic High definition</p>
+            <p>video with your own settings specifications!</p>
         </div>
-        <div class="upload uploading">
+        <div class="preview_block">
             <h2>Project <strong>Tessera</strong></h2>
             <div class="background">
-                <video src="" class="preview"></video>
+                <img src="loader.gif" />
             </div>
-            <div class="settings">
-                <p>SETTINGS OPTIONS</p>
-                <p>
-                    <label>Topic: </label>
-                    <select>
-                        <option>Animals</option>
-                    </select>
-                    <label style="padding-left:30px">Compression: </label>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>4</option>
-                        <option>8</option>
-                    </select>
-                </p>
-            </div>
+            <video id="preview" src="" class="preview" controls></video>
         </div>
     </body>
 </html>

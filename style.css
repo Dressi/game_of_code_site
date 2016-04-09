@@ -3,6 +3,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+iframe {
+    position: absolute;
+}
+
 .background {
     background-image: url(background.jpg);
     background-size: cover;
@@ -28,7 +32,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.greetings strong, .upload strong {
+.greetings strong, .preview_block strong {
     text-transform: capitalize;
     color: #997701;
     font-weight: 400;
@@ -48,43 +52,76 @@ h2 {
     line-height: 40px;
     width: 160px;
     height: 40px;
-    margin: 0 auto;
     margin-top: 40px;
+    margin-left: 10px;
     font-weight: 300;
+    position: relative;
+    padding: 10px 20px;
 }
 
-.greetings .upload_button:hover {
-    background-color: #997701;
-    color: white;
+.upload_button input {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.upload_button input {
     cursor: pointer;
 }
 
-.upload {
+.greetings .upload_button:hover {
+    cursor: pointer;
+    background-color: #997701;
+    color: white;
+}
+
+.preview_block {
     width: 70%;
     margin: 0 auto;
     text-align: center;
+    display: none;
 }
 
-.upload .background {
+.preview_block .background, #preview {
     height: 60vh;
     width: 100%;
     margin: 0 auto;
     margin-top:7vh;
+    margin-bottom: 23vh;
+    position: relative;
 }
 
-.upload select, .upload label, .upload p {
+.preview_block .background img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.preview_block .background {
+    opacity: .7;
+}
+
+select, label, p.label {
     text-align: left;
+    font-size: 14px;
 }
 
-.upload .settings {
-    height: 20vh;
+p.label {
+    color: black;
+    margin: 0;
 }
 
-.upload label {
-    padding-right: 10px;
+.settings {
+    height: 100px;
+    width: 435px;
+    margin: 0 auto;
 }
 
-.upload select {
+select {
     border: 1px solid #997701;
     color: #997701;
     height: 30px;
