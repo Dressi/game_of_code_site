@@ -23,7 +23,7 @@ echo "Video uploaded!";
 
 $commands;
 
-echo exec($converter . ' ' . $uploadFile. ' ' . $id . $_POST['category'] . $_POST['compression'] . ' > /dev/null 2>&1 &', $commands);
+echo exec($converter . ' ' . $uploadFile. ' ' . $id . ' ' . $_POST['category'] . ' ' . $_POST['compression'] . ' > /dev/null 2>&1 &', $commands);
 
 echo "Generation started...";
 
