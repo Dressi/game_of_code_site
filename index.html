@@ -16,15 +16,19 @@
                     <p class="label">SETTINGS OPTIONS</p>
                     <div>
                         <label>Topic: </label>
-                        <select>
-                            <option>Animals</option>
+                        <select name="category">
+                            <option value="animals_merged">Animals</option>
+                            <option value="new_people">People</option>
+                            <option value="new_music">Music</option>
+                            <option value="new_science">Science</option>
+                            <option value="all">All</option>
                         </select>
                         <label style="padding-left:20px">Compression: </label>
-                        <select>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>4</option>
+                        <select name="compression">
                             <option>8</option>
+                            <option>4</option>
+                            <option>2</option>
+                            <option>1</option>
                         </select>
                         <span class="upload_button">
                             <input name="file" type="file" onchange="document.forms.uploadform.submit(); onSubmit();"/>
