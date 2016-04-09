@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.background {
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
+.greetings {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #26272d;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+.greetings h1 {
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.greetings strong, .upload strong {
+    text-transform: capitalize;
+    color: #997701;
+    font-weight: 400;
+}
+
+.greetings p {
+    font-size: 14px;
+    color: #997701;
+    margin: 2px;
+    font-weight: 300;
+}
+
+.greetings .upload_button {
+    color: #997701;
+    border: 1px solid #997701;
+    border-radius: 20px;
+    line-height: 40px;
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+.greetings .upload_button:hover {
+    background-color: #997701;
+    color: white;
+    cursor: pointer;
+}
+
+.upload {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.upload .background {
+    height: 60vh;
+    width: 100%;
+    margin: 0 auto;
+    margin-top:7vh;
+}
+
+.upload select, .upload label, .upload p {
+    text-align: left;
+}
+
+.upload .settings {
+    height: 20vh;
+}
+
+.upload label {
+    padding-right: 10px;
+}
+
+.upload select {
+    border: 1px solid #997701;
+    color: #997701;
+    height: 30px;
+    padding-right: 5px;
+    min-width: 50px;
+}
+
+.preview {
+    display: none;
+}
